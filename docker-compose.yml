@@ -1,0 +1,39 @@
+
+
+services:
+  # Node.js App Service ('app')
+  app:
+    build: . # Build the image from the Dockerfile in the current directory (.)
+    ports:
+      - "3000:3000" # Map host port 3000 to container port 3000
+    environment:
+      # Define environment variables for the app container
+      # MONGODB_URI connects to the 'mongo' service on the Docker network
+      MONGODB_URI: mongodb://mongo:27017/apolloniaDb
+      PORT: 3000
+      NODE_ENV: production # Set environment to production
+    depends_on:
+      - mongo # Ensures 'mongo' service starts before 'app' service
+    volumes:
+       # Development only: Mount local code into container for hot-reloading.
+       # Comment out or remove the first volume for production builds.
+       # - .:/usr/src/app
+       # Use an anonymous volume to avoid overwriting node_modules installed in the Dockerfile build step
+       - /usr/src/app/node_modules
+    restart: unless-stopped # Restart policy
+
+  # MongoDB Service ('mongo')
+  mongo:
+    image: mongo:6.0 # Use a specific MongoDB version (recommended)
+    ports:
+      # Optional: Expose MongoDB port to host for external tools (like MongoDB Compass)
+      # Remove or comment out if direct host access is not needed.
+      - "27017:27017"
+    volumes:
+      # Use a named volume ('mongo-data') to persist MongoDB data across container restarts/recreations
+      - mongo-data:/data/db
+    restart: unless-stopped # Restart policy
+
+volumes:
+  # Define the named volume for persistent MongoDB data
+  mongo-data:

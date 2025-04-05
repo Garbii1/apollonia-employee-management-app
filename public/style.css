@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #16a085;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center; /* Center sections if space allows */
+}
+
+.section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 350px; /* Minimum width before wrapping */
+    max-width: 500px; /* Optional: Maximum width */
+    display: flex;
+    flex-direction: column;
+}
+
+/* List Styles */
+ .list-container {
+    max-height: 300px; /* Set max height for lists */
+    overflow-y: auto; /* Add scroll for long lists */
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fdfdfd;
+ }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+li {
+    background: #ecf0f1;
+    margin-bottom: 8px;
+    padding: 12px 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word; /* Prevent long names from overflowing */
+    font-size: 0.95em;
+}
+
+ li span {
+    flex-grow: 1;
+    margin-right: 10px;
+ }
+ li .emp-depts {
+     font-size: 0.85em;
+     color: #555;
+     margin-left: 5px;
+ }
+
+
+/* Form Styles */
+form {
+    margin-top: 10px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #16a085;
+    box-shadow: 0 0 3px rgba(22, 160, 133, 0.3);
+}
+
+/* Button Styles */
+button {
+    padding: 10px 18px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"] {
+    background-color: #16a085;
+    color: white;
+}
+button[type="submit"]:hover {
+    background-color: #117a65;
+}
+
+button.edit-btn, button.delete-btn {
+    padding: 6px 10px;
+    font-size: 0.85em;
+    margin-left: 5px;
+}
+
+button.edit-btn {
+    background-color: #f39c12; /* Orange */
+    color: white;
+}
+button.edit-btn:hover {
+    background-color: #d68910;
+}
+
+button.delete-btn {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+button.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+button.cancel-btn {
+    background-color: #95a5a6; /* Gray */
+    color: white;
+}
+button.cancel-btn:hover {
+    background-color: #7f8c8d;
+}
+
+
+/* Employee Department Checkboxes */
+#employee-departments-select-container {
+    margin-bottom: 15px;
+}
+.checkbox-group {
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 10px;
+    max-height: 120px;
+    overflow-y: auto;
+    background-color: #fdfdfd;
+}
+.checkbox-group label {
+    font-weight: normal;
+    display: block; /* Ensure label takes full width */
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Error Message Styling */
+ .error-message {
+    color: #e74c3c;
+    background-color: #fbeaea;
+    border: 1px solid #e74c3c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: none; /* Hidden by default */
+ }
+ .error-message-small {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+ }

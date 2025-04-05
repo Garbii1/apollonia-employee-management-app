@@ -1,0 +1,11 @@
+# Exclude files and folders not needed in the final Docker image
+
+node_modules
+npm-debug.log
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+.env # Do not copy .env file into the image! Use environment variables in docker-compose.
+README.md # Optional
+seed.js # Optional, if you have it
