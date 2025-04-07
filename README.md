@@ -130,7 +130,7 @@ apollonia-app/
 
 ## License
 
-[MIT](LICENSE) <!-- If you add a LICENSE file, link it here. Otherwise, just state the license. -->
+[MIT](./LICENSE) <!-- If you add a LICENSE file, link it here. Otherwise, just state the license. -->
 
 ---
 
