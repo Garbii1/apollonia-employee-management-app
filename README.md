@@ -81,28 +81,6 @@ A seed script (`seed.js`) is included to populate the database with the initial 
     ```
 *   Refresh the application in your browser to see the populated data.
 
-## Project Structure
-apollonia-app/
-├── public/ # Frontend static files (HTML, CSS, JS)
-│ ├── index.html
-│ ├── style.css
-│ └── script.js
-├── models/ # Mongoose database schemas/models
-│ ├── department.model.js
-│ └── employee.model.js
-├── routes/ # Express API route definitions
-│ ├── department.routes.js
-│ └── employee.routes.js
-├── Dockerfile # Instructions to build the Node.js app image
-├── docker-compose.yml # Defines and runs the multi-container application (Node app + MongoDB)
-├── .dockerignore # Specifies files/folders to exclude from Docker image
-├── .env.example # Example environment variables file
-├── .gitignore # Specifies files/folders for Git to ignore
-├── package.json # Node.js project manifest and dependencies
-├── package-lock.json # Exact dependency versions
-├── server.js # Main Express application setup and server start
-└── seed.js # (Optional) Script to populate initial database data
-└── README.md # This file
 
 
 ## API Endpoints (Brief Overview)
